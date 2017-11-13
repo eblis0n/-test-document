@@ -1,0 +1,16 @@
+header = {
+    # 'Host': 'www.mmjpg.com ',
+    # 'Connection': 'Keep - Alive',
+    #'Referer': 'http://www.mmjpg.com/',
+    'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36 Core/1.53.3302.400 QQBrowser/9.6.11768.400'
+}
+url = "http://www.mmjpg.com/"
+html = requests.get(url, headers = header)
+html.encoding = 'utf-8'
+p = re.compile(r'src="(.*?)" alt="(.*?)"')
+#print(html.text)
+for m in p.finditer(html.text):
+    biao_ti = m.group(1)
+    URL = m.group(2)
+    print(biao_ti)
+    print(URL)
