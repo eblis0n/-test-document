@@ -1,0 +1,158 @@
+$theme-color: #0073b5;
+$theme-sec-color: #a28a88;
+$headerbar-height: 68px;
+$main-border-color: #dfe7ec; // rgb(209, 220, 229)
+$main-font-color: rgb(72, 89, 106);
+$main-font-size: 14px;
+$main-title-color: rgb(106, 79, 72);
+
+$theme-font-family: 'Avenir', Helvetica, Arial, sans-serif;
+
+// 侧边菜单
+$side-bar-bg-color: #eef2f6; /*rgb(238, 242, 246)*/
+$side-bar-bg-color-dark: rgb(50, 67, 87);
+$side-bar-color: rgb(72, 89, 106);
+$side-bar-color-dark: rgb(191, 205, 217);
+$side-bar-border-color: #e2e2e2;
+$side-bar-border-color-dark: rgb(72, 89, 106);
+$side-bar-hover-bg-color: rgb(209, 220, 229);
+$side-bar-hover-bg-color-dark: rgb(72, 89, 106);
+
+body, html {
+  height: 100%;
+  font-family: $theme-font-family;
+}
+
+html, body, div, span {
+  margin: 0;
+  padding: 0;
+  font-family: $theme-font-family;
+  font-size: $main-font-size;
+}
+
+@mixin textarea-placeholder {
+  font-size: 14px;
+  font-family: $theme-font-family;
+}
+
+textarea::-webkit-input-placeholder {
+  @include textarea-placeholder;
+}
+
+textarea::-moz-placeholder {
+  @include textarea-placeholder;
+}
+
+textarea:-ms-input-placeholder {
+  @include textarea-placeholder;
+}
+
+textarea:-moz-placeholder {
+  @include textarea-placeholder;
+}
+
+// 顶端请求API时的进度条样式
+#nprogress .bar {
+  background-color: #47f374;
+}
+
+.card-header {
+  color: $main-font-color;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.bgcolor-pending {
+  background-color: #418daf;
+}
+
+.bgcolor-progress {
+  background-color: #c35e39;
+}
+
+.bgcolor-complete {
+  background-color: #379653;
+}
+
+/*针对表格的一些优化*/
+.pagination {
+  text-align: right;
+  margin: 20px;
+}
+
+.doc-list-table {
+  width: 100%;
+  border: none;
+}
+
+.doc-card {
+  margin-top: 20px;
+}
+
+/*实时统计的图标*/
+.stats-icon-sum > img {
+  width: 20px;
+  height: 23px;
+  vertical-align: text-bottom;
+}
+
+.stats-icon-no > img {
+  width: 31px;
+  height: 15px;
+  vertical-align: text-bottom;
+}
+
+.stats-icon-user > img {
+  width: 18px;
+  height: 23px;
+  vertical-align: text-bottom;
+}
+
+.stats-icon-more > img {
+  width: 28px;
+  height: 28px
+}
+
+// 页面顶部面板
+.top-panel__box {
+  padding: 20px;
+  background-color: rgb(238, 242, 246);
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid $main-border-color;
+}
+.top-panel__box .el-form-item {
+  margin-bottom: 0;
+}
+
+/*TableCard组建公共样式*/
+.table-card__title {
+  position: relative;
+}
+.table-card__header {
+  font-size: 17px;
+  font-weight: 600;
+  color: $main-title-color;
+  padding: 5px 0;
+}
+
+/*修改element-ui自带样式*/
+.el-card {
+  box-shadow: none;
+}
+.el-card__header {
+  padding: 15px 20px;
+}
+
+.el-tabs--border-card {
+  box-shadow: none;
+}
+
+.el-menu {
+  height: auto;
+}
+
+.el-notification {
+  z-index: 9999!important;
+  width: auto!important;
+}
